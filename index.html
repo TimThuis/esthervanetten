@@ -5,32 +5,89 @@
     <!-- pixel ratio for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- tab info browser -->
+    <title>Esther van Etten - Kunst</title>
+    <link rel="shortcut icon" href="./src/images/favicon.ico" type="image/x-icon" />
+
     <!-- meta tags for search engines -->
-    <meta name="description" content="meta description" />
-    <meta name="keywords" content="meta, keywords" />
+    <meta name="description" content="Website van de kunstenaar Esther van Etten met werk, achtergrond informatie en contact" />
+    <meta name="keywords" content="Esther, van, Etten, Kunst, Thuis, Haarlem, Kunstenaar, Tekeningen, Velserbroek" />
     <meta name="author" content="T. Thuis" />
 
     <!-- social links -->
-    <meta property="og:title" content="title link social">
-    <meta property="og:description" content="description link social">
-    <meta property="og:image" content="./src/images/image.png">
-    <meta property="og:url" content="https://www.link.com">
-
-    <!-- tab info browser -->
-    <link rel="shortcut icon" href="./src/images/favicon.ico" type="image/x-icon" />
-    <title>Title Website</title>
+    <meta property="og:title" content="Kunst van Esther van Etten">
+    <meta property="og:description" content="Website van de kunstenaar Esther van Etten met werk, achtergrond informatie en contact">
+    <meta property="og:image" content="./src/images/social-image.jpg">
+    <meta property="og:url" content="esther-van-etten.nl">
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="./style.min.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Noto+Serif:400,400i,600" rel="stylesheet">
   </head>
   <body>
+    <div id="content">
+      <div id="header">
+        <div class="container">
+          <div class="logo-container">
+            <div id="logo">Esther van Etten</div>
+          </div>
+          <ul>
+            <li class="active"></li>
+            <li class="tab-btn" data-name="werk">Werk</li>
+            <li class="tab-btn" data-name="over">Over</li>
+            <li class="tab-btn" data-name="contact">Contact</li>
+          </ul>
+        </div>
+      </div>
 
-    <div id="app">
-      <p v-cloak>{{contact}}</p>
+      <div class="wiper"></div>
+
+      <div class="pagina-container">
+        <div data-name="werk" class="werk pagina">
+          <h2>Mijn Werk</h2>
+          <hr>
+          <div class="foto-container">
+            <img src="./src/images/art/one.jpg" alt="">
+            <img src="./src/images/art/two.jpg" alt="">
+          </div>
+        </div>
+
+        <div data-name="over" class="over pagina">
+          <h2>Het Proces & <br>Uitgangspunten</h2>
+          <hr>
+          <p>De nadruk ligt in mijn werk op het proces en het onderzoek naar licht en schaduw door middel van het bewerken van papier door het gebruik van horizontale, verticalen en rasters.</p>
+          <p>Gelaagdheid, ritmes, de scheidslijn zoeken tussen ambacht, volkskunst, toegepaste kunst en autonome kunst zijn sleutelwoorden in mijn werk.</p>
+        </div>
+
+        <div data-name="contact" class="contact pagina">
+          <h2>Neem contact <br>met mij op</h2>
+          <hr>
+          <table>
+            <tr>
+              <td>Woonplaats</td>
+              <td>Haarlem</td>
+            </tr>
+            <tr>
+              <td>Atelier</td>
+              <td>De Rode School 2.0 | Platbodum 197A <br>Velserbroek | <a href="https://goo.gl/KfdjvA" target="_blank">Kaart</a></td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td><a href="mailto:esther.v.etten@gmail.com">Esther.v.Etten@gmail.com</a></td>
+            </tr>
+            <tr>
+              <td>Telefoon</td>
+              <td><a href="tel:+31631976185">+31 6 31 97 61 85</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
-
   </body>
-  <script src="./src/js/axios.js"></script>
-  <script src="./src/js/vue.js"></script>
+  <!-- <script src="./src/js/axios.js"></script> -->
+  <!-- <script src="./src/js/vue.js"></script> -->
+  <script src="./src/js/TweenMax.js"></script>
   <script src="./main.js"></script>
 </html>

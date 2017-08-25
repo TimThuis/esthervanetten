@@ -1,3 +1,161 @@
 [v-cloak] {
   display: none;
 }
+
+$color-black: #1E2022;
+$color-white: #FFFFFF;
+$color-red: #F85F73;
+$color-gray: #B9B9B9;
+
+$font-big: 32px;
+$font-large: 24px;
+$font-medium: 18px;
+$font-regular: 16px;
+
+body {
+  margin: 0;
+  color: $color-black;
+  background: $color-white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: $font-regular;
+  p {
+    font-family: 'Noto Serif', serif;
+    line-height: 175%;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: $color-red;
+  }
+}
+
+#content {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.pagina-container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+#header {
+  text-transform: uppercase;
+  margin-top: 32px;
+  border-bottom: 2px solid $color-black;
+  .container {
+    display: flex;
+    align-items: flex-end;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .logo-container {
+    border-left: 24px solid $color-white;
+    border-right: 24px solid $color-white;
+    margin-bottom: -2px;
+  }
+  #logo {
+    font-size: $font-large;
+    border: 2px solid $color-black;
+    padding: 18px 24px 12px 24px;
+  }
+  ul {
+    display: flex;
+    position: relative;
+    li {
+      padding: 0 24px 12px 24px;
+      display: flex;
+      justify-content: center;
+      font-size: $font-medium;
+      cursor: pointer;
+      &.active {
+        position: absolute;
+        width: 98px;
+        bottom: 0;
+        left: 0;
+        border-bottom: 8px solid $color-red;
+        margin-bottom: -2px;
+        transition: all 300ms ease;
+        padding: 0;
+      }
+    }
+    .tab-btn {
+      transition: transform 300ms ease;
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+  }
+}
+
+.over, .contact {
+  display: none;
+}
+
+.pagina {
+  padding: 0 52px;
+  margin-top: 64px;
+  h2 {
+    font-size: $font-big;
+    text-transform: uppercase;
+    color: $color-black;
+    margin: 0;
+    line-height: 115%
+  }
+  hr {
+    width: 96px;
+    border: 4px solid $color-red;
+    display: inline-block;
+    margin: 32px 0;
+  }
+  p {
+    margin: 0 0 16px 0;
+  }
+  table {
+    font-family: 'Noto Serif', serif;
+    tr {
+      height: 32px;
+    }
+    td {
+      vertical-align: top;
+    }
+    tr > td:first-child {
+      font-style: italic;
+      width: 128px;
+    }
+  }
+}
+
+.foto-container {
+  img {
+    height: 128px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    &.activeImage {
+      height: 50vh;
+      width: auto;
+    }
+  }
+}
+
+.wiper {
+  background: $color-red;
+  height: 100%;
+  position: absolute;
+  top: 90px;
+}
+
+// media queries
+@media screen and (min-width: 1024px) {
+  .pagina p {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
