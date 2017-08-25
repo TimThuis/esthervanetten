@@ -131,13 +131,20 @@ body {
 }
 
 .foto-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px 0 0 -8px;
   img {
     height: 128px;
+    width: 128px;
     cursor: pointer;
     transition: all 500ms ease;
+    padding: 8px;
+    filter: grayscale(100%);
     &.activeImage {
       height: 50vh;
-      width: auto;
+      width: 50vh;
+      filter: grayscale(0%)
     }
   }
 }
@@ -147,6 +154,7 @@ body {
   height: 100%;
   position: absolute;
   top: 90px;
+  z-index: 100;
 }
 
 // media queries

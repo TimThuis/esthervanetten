@@ -2,6 +2,7 @@ const tabs = document.querySelectorAll('.tab-btn');
 const pages = document.querySelectorAll('.pagina');
 const photos = document.querySelectorAll('.werk img');
 const activeTab = document.querySelector('#header .active');
+const photoContainer = document.querySelector('.foto-container');
 const wiper = document.querySelector('.wiper');
 let activeImg = "";
 const wiperTl = new TimelineMax({
