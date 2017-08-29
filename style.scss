@@ -35,7 +35,7 @@ body {
 #content {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .pagina-container {
@@ -57,6 +57,12 @@ body {
     border-left: 24px solid $color-white;
     border-right: 24px solid $color-white;
     margin-bottom: -2px;
+  }
+  .btn-menu {
+    border: 2px solid $color-black;
+    padding: 17px;
+    margin-bottom: -2px;
+    cursor: pointer;
   }
   #logo {
     font-size: $font-large;
@@ -153,7 +159,7 @@ body {
   background: $color-red;
   height: 100%;
   position: absolute;
-  top: 90px;
+  top: 58px;
   z-index: 100;
 }
 
@@ -162,8 +168,65 @@ body {
   .pagina p {
     width: 50%;
   }
+  .btn-menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-
+  #header {
+    // border: none;
+    .container {
+      padding: 0 32px;
+      justify-content: space-between;
+    }
+    .logo-container {
+      border: none;
+      #logo {
+        font-size: 21px;
+      }
+    }
+    .menu-mobile {
+      display: flex;
+      position: fixed !important;
+      flex-direction: column;
+      background: rgba(255,255,255,0.9);
+      width: 0vw;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      z-index: 200;
+      justify-content: center;
+      overflow: hidden;
+      transition: width 500ms ease;
+      &.show {
+        width: 100vw;
+      }
+      li {
+        font-size: $font-large;
+        padding-bottom: 24px;
+        &:hover {
+          transform: none;
+        }
+      }
+      .active {
+        display: none;
+      }
+    }
+  }
+  .pagina {
+    padding: 0 32px;
+    h2 {
+      font-size: $font-large;
+    }
+  }
+  .foto-container {
+    justify-content: space-between;
+    .activeImage {
+      width: 100vw;
+    }
+  }
+  .wiper {
+    top: 55px;
+  }
 }

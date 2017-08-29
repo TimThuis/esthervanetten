@@ -4,8 +4,12 @@ const photos = document.querySelectorAll('.werk img');
 const activeTab = document.querySelector('#header .active');
 const photoContainer = document.querySelector('.foto-container');
 const wiper = document.querySelector('.wiper');
+const menu = document.querySelector('.menu-mobile');
 let activeImg = "";
 const wiperTl = new TimelineMax({
+  paused: true,
+});
+const menuTl = new TimelineMax({
   paused: true,
 });
 
@@ -21,6 +25,11 @@ wiperTl.to(wiper, 0.5, {
 }).to(wiper, 0.5, {
   width: 0,
 })
+
+TweenMax.staggerFrom('.foto-container img', 0.25, {
+  opacity: 0,
+  delay: 0.5,
+}, 0.1)
 
 // event listeners
 tabs.forEach((tab) => {
@@ -52,6 +61,7 @@ function openPhoto(event) {
 
 function tabClicked(event) {
   wiperTl.restart();
+  showMenuMobile();
   moveActiveTab(event.target);
 }
 
@@ -88,4 +98,8 @@ function showPage(data) {
       })
     }
   })
+}
+
+function showMenuMobile() {
+  menu.classList.contains('show')? menu.classList.remove('show') : menu.classList.add('show');
 }
