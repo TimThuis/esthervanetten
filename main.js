@@ -1,10 +1,9 @@
-const tabs = document.querySelectorAll('.tab-btn');
-const pages = document.querySelectorAll('.pagina');
+const pages = $('.pagina');
 const photos = document.querySelectorAll('.werk img');
 const activeTab = document.querySelector('#header .active');
 const photoContainer = document.querySelector('.foto-container');
 const wiper = document.querySelector('.wiper');
-const menu = document.querySelector('.menu-mobile');
+const menu = $('.menu-mobile');
 let activeImg = "";
 const wiperTl = new TimelineMax({
   paused: true,
@@ -31,14 +30,22 @@ TweenMax.staggerFrom('.foto-container img', 0.25, {
   delay: 0.5,
 }, 0.1)
 
-// event listeners
-tabs.forEach((tab) => {
-  tab.addEventListener('click', tabClicked)
+// tabs.forEach((tab) => {
+//   tab.addEventListener('click', tabClicked)
+// })
+
+$('.tab-btn').each(function(index, tab) {
+  tab.addEventListener('click', tabClicked);
 })
 
-photos.forEach((photo) => {
-  photo.addEventListener('click', openPhoto)
+// photos.forEach((photo) => {
+//   photo.addEventListener('click', openPhoto)
+// })
+
+$('.werk img').each(function(index, tab) {
+  tab.addEventListener('click', openPhoto);
 })
+
 
 function openPhoto(event) {
   let c = 'activeImage'
@@ -85,7 +92,7 @@ function moveActiveTab(tab) {
 }
 
 function showPage(data) {
-  pages.forEach((page) => {
+  pages.each(function(index, page) {
     if (page.dataset.name === data.dataset.name) {
       TweenMax.to(page, 0, {
         display: 'block',
