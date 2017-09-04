@@ -23,6 +23,7 @@ wiperTl.to('.wiper', 0.5, {
 
 TweenMax.staggerFrom('.foto-container img', 0.25, {
   opacity: 0,
+  delay: 0.5,
 }, 0.1)
 
 $('.tab-btn').each(function(index, tab) {
