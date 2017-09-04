@@ -71,6 +71,7 @@ body {
     height: 48px;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   ul {
     display: flex;
@@ -234,8 +235,8 @@ body {
       padding: 6px 16px 0 16px !important;
   }
   .activeImage {
-    width: calc(100vw - 80px) !important;
-    height: calc(100vw - 80px) !important;
+    width: calc(100vw - 64px) !important;
+    height: calc(100vw - 64px) !important;
   }
 }
 
