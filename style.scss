@@ -243,8 +243,8 @@ body {
 
 @media screen and (max-width: 500px) {
   .foto-container > img {
-    width: calc(50vw - 40px) !important;
-    height: calc(50vw - 40px) !important;
+    width: calc(50vw - 40px);
+    height: calc(50vw - 40px);
   }
 }
 
