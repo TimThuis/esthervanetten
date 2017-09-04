@@ -62,17 +62,21 @@ function moveActiveTab(tab) {
 
   switch (tab.dataset.name) {
     case 'werk':
-      $('#header .active').css('left', 0);
-      $('#header .active').css('width', tab.clientWidth + 'px');
+      animate(0, tab.clientWidth);
       break;
     case 'over':
-      $('#header .active').css('left', '98px');
-      $('#header .active').css('width', tab.clientWidth + 'px');
+      animate('98px', tab.clientWidth);
       break;
     case 'contact':
-      $('#header .active').css('left', '194px');
-      $('#header .active').css('width', tab.clientWidth + 'px');
+      animate('194px', tab.clientWidth);
       break;
+  }
+
+  function animate(x, y) {
+    $('#header .active').css({
+      'left': x,
+      'width': y + 'px',
+    })
   }
 }
 

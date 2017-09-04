@@ -60,14 +60,17 @@ body {
   }
   .btn-menu {
     border: 2px solid $color-black;
-    padding: 17px;
+    padding: 18.5px 16.5px;
     margin-bottom: -2px;
     cursor: pointer;
   }
   #logo {
     font-size: $font-large;
     border: 2px solid $color-black;
-    padding: 18px 24px 12px 24px;
+    padding: 6px 24px 0 24px;
+    height: 48px;
+    display: flex;
+    align-items: center;
   }
   ul {
     display: flex;
@@ -175,16 +178,12 @@ body {
 
 @media screen and (max-width: 1024px) {
   #header {
-    // border: none;
+    .logo-container {
+      border: none;
+    }
     .container {
       padding: 0 32px;
       justify-content: space-between;
-    }
-    .logo-container {
-      border: none;
-      #logo {
-        font-size: 21px;
-      }
     }
     .menu-mobile {
       display: flex;
@@ -222,11 +221,27 @@ body {
   }
   .foto-container {
     justify-content: space-between;
+    margin-right: -8px !important;
     .activeImage {
       width: 100vw;
     }
   }
-  .wiper {
-    top: 55px;
+}
+
+@media screen and (max-width: 640px) {
+    #logo {
+      font-size: 12px !important;
+      padding: 6px 16px 0 16px !important;
+  }
+  .activeImage {
+    width: calc(100vw - 80px) !important;
+    height: calc(100vw - 80px) !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .foto-container > img {
+    width: calc(100vw - 64px) !important;
+    height: calc(100vw - 64px) !important;
   }
 }
