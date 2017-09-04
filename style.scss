@@ -241,6 +241,13 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .foto-container > img {
+    width: calc(50vw - 40px) !important;
+    height: calc(50vw - 40px) !important;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .foto-container > img {
     width: calc(100vw - 64px) !important;
