@@ -21,8 +21,8 @@ wiperTl.to('.wiper', 0.5, {
   width: 0,
 })
 
-TweenMax.staggerFrom('.foto-container img', 0.25, {
-  opacity: 0,
+TweenMax.staggerTo('.foto-container img', 0.25, {
+  opacity: 1,
   delay: 0.5,
 }, 0.1)
 
