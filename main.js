@@ -8,6 +8,9 @@ var wiperTl = new TimelineMax({
 var menuTl = new TimelineMax({
   paused: true,
 });
+var menuIconTl = new TimelineMax({
+  paused: true,
+});
 
 // timelines
 wiperTl.to('.wiper', 0.5, {
@@ -20,6 +23,17 @@ wiperTl.to('.wiper', 0.5, {
 }).to('.wiper', 0.5, {
   width: 0,
 })
+
+menuIconTl.to('.btn-bars', 0.25, {
+  opacity: 0,
+}, 'start')
+.to('.btn-bars', 0.5, {
+  rotation: 90,
+}, 'start').from('.btn-exit', 0.25, {
+  opacity: 0,
+}, 'start').from('.btn-exit', 0.5, {
+  rotation: -90,
+}, 'start')
 
 TweenMax.staggerTo('.foto-container img', 0.25, {
   opacity: 1,
@@ -99,7 +113,9 @@ function showPage(data) {
 function showMenuMobile() {
   if ($('.menu-mobile').hasClass('show')) {
     $('.menu-mobile').removeClass('show')
+    menuIconTl.reverse();
   } else {
     $('.menu-mobile').addClass('show');
+    menuIconTl.play();
   }
 }

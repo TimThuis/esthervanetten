@@ -60,9 +60,17 @@ body {
   }
   .btn-menu {
     border: 2px solid $color-black;
-    padding: 18.5px 16.5px;
+    padding: 16.5px;
     margin-bottom: -2px;
     cursor: pointer;
+    z-index: 250;
+    position: relative;
+    .btn-exit {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
   }
   #logo {
     font-size: $font-large;
