@@ -22,7 +22,7 @@ wiperTl.to('.wiper', 0.5, {
   right: 0,
 }).to('.wiper', 0.5, {
   width: 0,
-})
+});
 
 menuIconTl.to('.btn-bars', 0.25, {
   opacity: 0,
@@ -33,20 +33,20 @@ menuIconTl.to('.btn-bars', 0.25, {
   opacity: 0,
 }, 'start').from('.btn-exit', 0.5, {
   rotation: -90,
-}, 'start')
+}, 'start');
 
 TweenMax.staggerTo('.foto-container img', 0.25, {
   opacity: 1,
   delay: 0.5,
-}, 0.1)
+}, 0.1);
 
 $('.tab-btn').each(function(index, tab) {
   tab.addEventListener('click', tabClicked);
-})
+});
 
 $('.werk img').each(function(index, tab) {
   tab.addEventListener('click', openPhoto);
-})
+});
 
 function openPhoto(event) {
   var el = event.target;
@@ -54,10 +54,10 @@ function openPhoto(event) {
     $(el).addClass('activeImage');
     activeImg = event.target;
   } else {
-  $(activeImg).removeClass('activeImage')
+  $(activeImg).removeClass('activeImage');
   if (activeImg === event.target) {
       $(el).removeClass('activeImage');
-      activeImg = ""
+      activeImg = "";
   } else {
     $(el).addClass('activeImage');
     activeImg = event.target;
@@ -90,7 +90,7 @@ function moveActiveTab(tab) {
     $('#header .active').css({
       'left': x,
       'width': y + 'px',
-    })
+    });
   }
 }
 
@@ -100,19 +100,19 @@ function showPage(data) {
       TweenMax.to(page, 0, {
         display: 'block',
         delay: 0.5,
-      })
+      });
     } else {
       TweenMax.to(page, 0, {
         display: 'none',
         delay: 0.5,
-      })
+      });
     }
-  })
+  });
 }
 
 function showMenuMobile() {
   if ($('.menu-mobile').hasClass('show')) {
-    $('.menu-mobile').removeClass('show')
+    $('.menu-mobile').removeClass('show');
     menuIconTl.reverse();
   } else {
     $('.menu-mobile').addClass('show');
